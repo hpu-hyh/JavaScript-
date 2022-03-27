@@ -416,7 +416,7 @@ String算是对于toString的一个补充，String调用时遵循以下如下规
 
 es6中新增了使用模拟板字面量定义字符串的功能，与单双引号不同的地方是，模板字面量可以保留字符串中的空格以及换行，可以跨行定义字符。使用反引号进行定义，这里不做过多解释。
 
-### 字符串插值
+#### 字符串插值
 
 字符串插值是模板字面量一个常用的特性，可以在一个连续定义中插入一个或者多个值。
 
@@ -438,3 +438,24 @@ let newStr = `${num} to the ${str} power is ${num*num}`;
 
 字符串插值中支持调用方法和函数
 
+#### 原始字符串
+
+使用模板字面量可以获取原始的模板字面量内容（若换行符或者Unicode字符），而不是被转意后的字符表示。为此，可以使用默认的String.raw标签函数。
+
+```js
+//Unicode实例
+//\u00A9 是版权符号©
+console.log(`\u00A9`); //©
+console.log(String.raw`\u00A9`); // \u00A9
+
+//换行符实例
+console.log(`first line \n second line`) 
+//first line
+//second line
+conlose.log((String.raw`first line \n second line`);
+//first line \n second line      
+```
+
+## 6.Symbol类型
+
+ES6新增类型，表示独一无二的量，看不懂，先不记了
