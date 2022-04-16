@@ -21,7 +21,7 @@ function test () {
     message = 'hi';//全局
 }
 test();
-console.log (message);//'hi'
+console.log (message);//hi
 //但是在实际开发中并不支持这么做，全局变量会给代码维护带来困难。
 ```
 
