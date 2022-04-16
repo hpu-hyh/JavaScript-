@@ -18,7 +18,7 @@ console.log (message);//出错！
 
 ```js
 function test () {
-    message = 'hi';//全局变量
+    message = 'hi';//全局
 }
 test();
 console.log (message);//'hi'
